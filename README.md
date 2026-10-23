@@ -73,7 +73,7 @@ Das Team baut das zentrale **Kontenregister** des Staates. Es verwaltet Konten u
 
 ---
 
-## 5. Rollen (Platzhalter)
+## 5. Rollen 
 
 | Rolle | Verantwortlich |
 |---|---|
