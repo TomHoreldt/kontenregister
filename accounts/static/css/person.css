@@ -1,0 +1,115 @@
+/* Gemeinsamer Stil für die vier Startseiten – ohne JavaScript */
+:root {
+  --rot: #a72228;
+  --dunkelrot: #7f171d;
+  --hellrot: #f8eeee;
+  --schriftfarbe: #222124;
+  --grau: #6d6a6a;
+  --linie: #e7e1df;
+  --hintergrund: #faf8f7;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--hintergrund); color: var(--schriftfarbe); font: 15px/1.55 Arial, sans-serif; }
+a { color: inherit; }
+button, input, select { font: inherit; }
+
+/* Kopf und Navigation */
+.seitenkopf { background: white; border-top: 5px solid var(--rot); border-bottom: 1px solid var(--linie); }
+.kopf-inhalt { max-width: 1130px; min-height: 87px; margin: auto; padding: 14px 26px; display: flex; align-items: center; gap: 18px; }
+.marke { display: flex; align-items: center; gap: 11px; text-decoration: none; margin-right: auto; }
+.markenzeichen { width: 40px; height: 40px; display: grid; place-items: center; flex: none; background: var(--rot); color: white; font-size: 16px; font-weight: bold; }
+.markenname { display: flex; flex-direction: column; font-size: 19px; line-height: 1.1; font-weight: bold; letter-spacing: -.55px; }
+.markenname small { margin-top: 5px; font-size: 11px; font-weight: normal; color: var(--grau); letter-spacing: 0; }
+.rollenbezeichnung { color: var(--grau); font-size: 13px; padding-right: 17px; border-right: 1px solid var(--linie); }
+.abmelden { color: var(--rot); font-size: 13px; font-weight: bold; text-decoration: none; white-space: nowrap; }
+.abmelden:hover { text-decoration: underline; }
+.zweite-navigation { background: white; border-bottom: 1px solid var(--linie); }
+.navigation-inhalt { max-width: 1130px; margin: auto; padding: 0 26px; display: flex; gap: 28px; overflow-x: auto; }
+.navigation-inhalt a { padding: 15px 0 13px; font-size: 13px; color: #585255; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; }
+.navigation-inhalt a:hover { color: var(--rot); border-color: var(--rot); }
+
+/* Einführung und Kontostand */
+.seiteninhalt { max-width: 1130px; margin: auto; padding: 43px 26px 56px; }
+.willkommen { display: grid; grid-template-columns: 1.5fr .92fr; gap: 25px; align-items: stretch; margin-bottom: 38px; }
+.willkommen-text { display: flex; flex-direction: column; justify-content: center; padding: 8px 0; }
+.kleine-ueberschrift, .abschnitt-nummer { color: var(--rot); font-size: 11px; font-weight: bold; letter-spacing: 1px; }
+.kleine-ueberschrift { margin: 0 0 11px; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(28px, 3.3vw, 38px); line-height: 1.18; letter-spacing: -1px; }
+.einleitungstext { margin: 13px 0 0; color: var(--grau); }
+.vorschauhinweis { margin-top: 22px; padding-left: 11px; border-left: 2px solid var(--rot); font-size: 12px; color: #736567; }
+.kontostand-bereich { background: var(--rot); color: white; padding: 26px 29px; min-height: 203px; display: flex; flex-direction: column; }
+.kontostand-titel { margin: 0; font-size: 12px; opacity: .85; }
+.kontostand-betrag { margin: 12px 0 15px; font-size: clamp(30px, 3.4vw, 39px); line-height: 1.2; font-weight: bold; white-space: nowrap; }
+.kontostand-zusatz { margin-top: auto; border-top: 1px solid #ffffff65; padding-top: 13px; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 12px; }
+.verwaltungszahlen { display: flex; justify-content: space-between; gap: 14px; margin-top: auto; }
+.verwaltungszahlen div { display: flex; flex-direction: column; gap: 3px; }
+.verwaltungszahlen b { font-size: 24px; line-height: 1.2; }
+.verwaltungszahlen span { opacity: .83; font-size: 11px; }
+
+/* Die einzelnen Funktionsbereiche */
+.inhaltsabschnitt { display: grid; grid-template-columns: 212px minmax(0, 1fr); gap: 38px; padding: 32px 0 34px; border-top: 1px solid var(--linie); }
+.abschnitt-seite { padding-top: 3px; }
+.abschnitt-nummer { display: block; margin-bottom: 8px; }
+h2 { margin: 0 0 7px; font-size: 20px; line-height: 1.23; }
+h3 { margin: 0 0 9px; font-size: 15px; }
+p { margin: 0; }
+.abschnitt-seite p, .hinweis, .klein { color: var(--grau); font-size: 12px; }
+.abschnitt-seite p { font-size: 13px; }
+.abschnitt-inhalt { min-width: 0; background: white; border: 1px solid #eee8e5; padding: 25px 27px; }
+.hinweis { margin-top: 12px; }
+.angabenliste, .formular-raster, .infospalten { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 26px; }
+.angabenliste { margin: 0; }
+.einzelangabe { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--linie); }
+.einzelangabe dt { color: var(--grau); font-size: 12px; }
+.einzelangabe dd { margin: 0; font-size: 13px; font-weight: bold; text-align: right; overflow-wrap: anywhere; }
+
+/* Formulare */
+.formular-raster { gap: 15px 16px; }
+.eingabefeld { display: flex; flex-direction: column; gap: 6px; }
+.eingabefeld.ganze-breite { grid-column: 1 / -1; }
+.eingabefeld label { font-size: 12px; font-weight: bold; }
+.eingabefeld input, .eingabefeld select { width: 100%; min-height: 44px; padding: 11px; border: 1px solid #d8d0ce; border-radius: 2px; background: white; }
+.eingabefeld input:focus, .eingabefeld select:focus { border-color: var(--rot); outline: 2px solid #fae9e9; }
+.aktionen, .tabellen-werkzeuge { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 17px; }
+.tabellen-werkzeuge { justify-content: space-between; margin: 0 0 15px; }
+.schaltflaeche { display: inline-block; padding: 10px 15px; background: var(--rot); border: 1px solid var(--rot); border-radius: 2px; color: white; text-align: center; text-decoration: none; font-size: 13px; font-weight: bold; cursor: pointer; }
+.schaltflaeche:hover { background: var(--dunkelrot); }
+.schaltflaeche.zweitrangig { background: white; color: var(--rot); }
+.schaltflaeche.zweitrangig:hover { background: var(--hellrot); }
+.schaltflaeche:disabled { background: #a8a1a0; border-color: #a8a1a0; cursor: not-allowed; }
+
+/* Tabellen, Statistiken und Statusmeldungen */
+.tabelle-bereich { overflow-x: auto; }
+table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: 12px; }
+th, td { padding: 12px 11px; border-bottom: 1px solid var(--linie); text-align: left; }
+th { background: #f6f3f2; color: #595251; }
+tbody tr:hover { background: #fff8f7; }
+.zahl { text-align: right; white-space: nowrap; font-weight: bold; font-variant-numeric: tabular-nums; }
+.eingang { color: #186c48; }
+.ausgang { color: var(--rot); }
+.infospalten { gap: 15px; }
+.infokasten { background: #fbf9f8; border-left: 2px solid var(--rot); padding: 14px 17px; }
+.infokasten p { font-size: 12px; color: var(--grau); }
+.zeilenliste { list-style: none; margin: 0; padding: 0; }
+.zeilenliste li { display: flex; justify-content: space-between; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--linie); font-size: 13px; }
+.tag { display: inline-block; background: var(--hellrot); color: var(--dunkelrot); padding: 3px 7px; font-size: 12px; }
+.tag.green { background: #e7f3eb; color: #186c48; }
+/* Handy und Tablet */
+@media (max-width: 850px) {
+  .willkommen, .inhaltsabschnitt { grid-template-columns: 1fr; }
+  .inhaltsabschnitt { gap: 13px; }
+  .kontostand-bereich { min-height: 160px; }
+  .abschnitt-inhalt { padding: 20px; }
+}
+@media (max-width: 560px) {
+  .kopf-inhalt { padding: 14px 16px; }
+  .rollenbezeichnung { display: none; }
+  .markenzeichen { width: 34px; height: 34px; }
+  .navigation-inhalt { padding: 0 16px; gap: 18px; }
+  .seiteninhalt { padding: 28px 15px 45px; }
+  .abschnitt-inhalt { padding: 17px 14px; }
+  .angabenliste, .formular-raster, .infospalten { grid-template-columns: 1fr; }
+  .eingabefeld.ganze-breite { grid-column: auto; }
+  .kontostand-betrag { white-space: normal; font-size: 30px; }
+}

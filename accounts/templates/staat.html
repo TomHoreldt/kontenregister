@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Staatliche Institution | Kontenregister
+    </title>
+    <link rel="stylesheet" href="staat.css">
+  </head>
+  <body>
+    <header class="seitenkopf">
+      <div class="kopf-inhalt">
+        <a href="#uebersicht" class="marke" aria-label="Zur Übersicht">
+          <span class="markenzeichen">KR</span>
+          <span class="markenname">Kontenregister<small>Staat neu denken</small></span>
+        </a>
+        <span class="rollenbezeichnung">Staatliche Institution</span>
+        <a href="login.html" class="abmelden">Abmelden</a>
+      </div>
+    </header>
+    <nav class="zweite-navigation" aria-label="Seitennavigation">
+      <div class="navigation-inhalt">
+        <a href="#uebersicht">Übersicht</a>
+        <a href="#konto">Konto</a>
+        <a href="#steuern">Steuern</a>
+        <a href="#zahlungen">Zahlungen</a>
+        <a href="#gehalt">Gehälter</a>
+        <a href="#kontoauszug">Kontoauszug</a>
+        <a href="#finanzen">Finanzen</a>
+        <a href="#profil">Profil</a>
+      </div>
+    </nav>
+    <main class="seiteninhalt">
+      <section class="willkommen" id="uebersicht">
+        <div class="willkommen-text">
+          <p class="kleine-ueberschrift">Staatliche Institution · Startseite</p>
+          <h1>Staatliche Finanzverwaltung</h1>
+          <p class="einleitungstext">Steuereinnahmen, staatliche Zahlungen und das eigene Institutionskonto.</p>
+          <p class="vorschauhinweis">Demoversion mit Beispieldaten. Es werden keine echten Zahlungen oder Änderungen ausgeführt.</p>
+        </div>
+        <div class="kontostand-bereich">
+          <p class="kontostand-titel">Institutionskonto</p>
+          <div class="kontostand-betrag">
+            128.410,80 €
+          </div>
+          <div class="kontostand-zusatz"><span><b>34.900 €</b> · Steuereinnahmen</span><span><b>21.500 €</b> · Staatliche Ausgaben</span></div>
+        </div>
+      </section>
+      <section class="inhaltsabschnitt" id="konto">
+        <div class="abschnitt-seite">
+          <span class="abschnitt-nummer">01 / Staatliche Institution</span>
+          <h2>Institutionskonto</h2>
+          <p>Ein Konto pro staatlicher Institution.</p>
+        </div>
+        <div class="abschnitt-inhalt">
+          <dl class="angabenliste">
+            <div class="einzelangabe"><dt>Institutions-ID</dt><dd>S-1001</dd></div>
+            <div class="einzelangabe"><dt>Konto-ID</dt><dd>K-0003</dd></div>
+            <div class="einzelangabe"><dt>Kontotyp</dt><dd>Staat</dd></div>
+            <div class="einzelangabe"><dt>Währung</dt><dd>EUR</dd></div>
+            <div class="einzelangabe"><dt>Status</dt><dd>Aktiv</dd></div>
+            <div class="einzelangabe"><dt>Kontenanzahl</dt><dd>1</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="inhaltsabschnitt" id="steuern">
+        <div class="abschnitt-seite">
+          <span class="abschnitt-nummer">02 / Staatliche Institution</span>
+          <h2>Steuereinnahmen</h2>
+          <p>Beispielhafte Einnahmen nach Steuerarten.</p>
+        </div>
+        <div class="abschnitt-inhalt">
+          <div class="infospalten">
+            <div class="infokasten">
+              <h3>Einkommensteuer</h3>
+              <p>19.200 € im Beispielmonat</p>
+            </div>
+            <div class="infokasten">
+              <h3>Umsatzsteuer</h3>
+              <p>10.800 € im Beispielmonat</p>
+            </div>
+            <div class="infokasten">
+              <h3>Unternehmenssteuer</h3>
+              <p>4.900 € im Beispielmonat</p>
+            </div>
+            <div class="infokasten">
+              <h3>Gesamteinnahmen</h3>
+              <p>34.900 € im Beispielmonat</p>
+            </div>
+          </div>
+          <p class="hinweis">Die tatsächlichen Steuersätze werden im Adminbereich festgelegt.</p>
+        </div>
+      </section>
+      <section class="inhaltsabschnitt" id="zahlungen">
+        <div class="abschnitt-seite">
+          <span class="abschnitt-nummer">03 / Staatliche Institution</span>
+          <h2>Staatliche Zahlung</h2>
+          <p>Zahlung vom Institutionskonto an ein Unternehmen.</p>
+        </div>
+        <div class="abschnitt-inhalt">
+          <form>
+            <div class="formular-raster">
+              <div class="eingabefeld">
+                <label for="staat-feld-1">Empfänger-Unternehmens-ID</label>
+                <input id="staat-feld-1" placeholder="z. B. U-1001" type="text">
+              </div>
+              <div class="eingabefeld">
+                <label for="staat-feld-2">Betrag (€)</label>
+                <input id="staat-feld-2" placeholder="z. B. 15000.00" type="number">
+              </div>
+              <div class="eingabefeld ganze-breite">
+                <label for="staat-feld-3">Betreff / Projekt</label>
+                <input id="staat-feld-3" placeholder="z. B. Straßensanierung" type="text">
+              </div>
+            </div>
+            <div class="aktionen">
+              <button class="schaltflaeche" disabled type="button">Ausführen (später)</button>
+              <span class="klein">Noch nicht mit dem Backend verbunden.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="inhaltsabschnitt" id="gehalt">
+        <div class="abschnitt-seite">
+          <span class="abschnitt-nummer">04 / Staatliche Institution</span>
+          <h2>Gehaltszahlung</h2>
+          <p>Gehaltszahlung an staatliche Beschäftigte.</p>
+        </div>
+        <div class="abschnitt-inhalt">
+          <form>
+            <div class="formular-raster">
+              <div class="eingabefeld">
+                <label for="staat-feld-4">Personen-ID</label>
+                <input id="staat-feld-4" placeholder="z. B. P-0815" type="text">
+              </div>
+              <div class="eingabefeld">
+                <label for="staat-feld-5">Bruttogehalt (€)</label>
+                <input id="staat-feld-5" placeholder="z. B. 3200.00" type="number">
+              </div>
+              <div class="eingabefeld ganze-breite">
+                <label for="staat-feld-6">Betreff</label>
+                <input id="staat-feld-6" placeholder="z. B. Staatsgehalt November" type="text">
+              </div>
+            </div>
+            <div class="aktionen">
+              <button class="schaltflaeche" disabled type="button">Ausführen (später)</button>
+              <span class="klein">Noch nicht mit dem Backend verbunden.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="inhaltsabschnitt" id="kontoauszug">
+        <div class="abschnitt-seite">
+          <span class="abschnitt-nummer">05 / Staatliche Institution</span>
+          <h2>Kontoauszug</h2>
+          <p>Alle Buchungen übersichtlich an einer Stelle.</p>
+        </div>
+        <div class="abschnitt-inhalt">
+          <div class="tabellen-werkzeuge">
+            <span class="klein">Die letzten zehn Buchungen · Beispielwerte</span>
+            <a class="schaltflaeche zweitrangig" download="Kontoauszug_Staat.xlsx" href="Kontoauszug_Staat.xlsx">Excel herunterladen</a>
+          </div>
+          <div class="tabelle-bereich">
+            <table>
+              <thead>
+                <tr><th>Datum</th><th>Art</th><th>Betreff</th><th>Gegenkonto</th><th class="zahl">Betrag</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>10.11.2026</td><td>Steuereinnahme</td><td>Einkommensteuer</td><td>P-0854</td><td class="zahl eingang">+ 12.500,00 €</td></tr>
+                <tr><td>09.11.2026</td><td>Infrastrukturzahlung</td><td>Straßensanierung A-201</td><td>U-1110</td><td class="zahl ausgang">− 8.400,00 €</td></tr>
+                <tr><td>08.11.2026</td><td>Steuereinnahme</td><td>Lohnsteuer</td><td>U-1001</td><td class="zahl eingang">+ 1.300,00 €</td></tr>
+                <tr><td>07.11.2026</td><td>Steuereinnahme</td><td>Unternehmenssteuer</td><td>U-2120</td><td class="zahl eingang">+ 7.750,00 €</td></tr>
+                <tr><td>06.11.2026</td><td>Staatsausgabe</td><td>Digitale Verwaltung</td><td>U-3470</td><td class="zahl ausgang">− 4.500,00 €</td></tr>
+                <tr><td>05.11.2026</td><td>Steuereinnahme</td><td>Einkommensteuer</td><td>P-0912</td><td class="zahl eingang">+ 9.100,00 €</td></tr>
+                <tr><td>04.11.2026</td><td>Infrastrukturzahlung</td><td>Brückensanierung A-198</td><td>U-4110</td><td class="zahl ausgang">− 12.200,00 €</td></tr>
+                <tr><td>03.11.2026</td><td>Steuereinnahme</td><td>Lohnsteuer</td><td>U-2044</td><td class="zahl eingang">+ 2.450,00 €</td></tr>
+                <tr><td>02.11.2026</td><td>Gehaltszahlung</td><td>Öffentlicher Dienst</td><td>P-2008</td><td class="zahl ausgang">− 3.200,00 €</td></tr>
+                <tr><td>01.11.2026</td><td>Staatsausgabe</td><td>Betriebskosten</td><td>U-3771</td><td class="zahl ausgang">− 1.800,00 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="hinweis">Die Excel-Datei enthält diese zehn Beispielbuchungen. In der fertigen Anwendung stammen die Daten aus der Datenbank.</p>
+        </div>
+      </section>
+      <section class="inhaltsabschnitt" id="finanzen">
+        <div class="abschnitt-seite">
+          <span class="abschnitt-nummer">06 / Staatliche Institution</span>
+          <h2>Finanzüberblick</h2>
+          <p>Vereinfachte Übersicht über den Beispielmonat.</p>
+        </div>
+        <div class="abschnitt-inhalt">
+          <ul class="zeilenliste">
+            <li><span>Steuereinnahmen</span><strong>34.900,00 €</strong></li>
+            <li><span>Staatliche Ausgaben</span><strong>21.500,00 €</strong></li>
+            <li><span>Saldo des Monats</span><strong>+ 13.400,00 €</strong></li>
+          </ul>
+        </div>
+      </section>
+      <section class="inhaltsabschnitt" id="profil">
+        <div class="abschnitt-seite">
+          <span class="abschnitt-nummer">07 / Staatliche Institution</span>
+          <h2>Institutionsprofil</h2>
+          <p>Zugeordnetes Konto und Zugang.</p>
+        </div>
+        <div class="abschnitt-inhalt">
+          <dl class="angabenliste">
+            <div class="einzelangabe"><dt>Institution</dt><dd>Staatliche Finanzverwaltung (Beispiel)</dd></div>
+            <div class="einzelangabe"><dt>Institutions-ID</dt><dd>S-1001</dd></div>
+            <div class="einzelangabe"><dt>Konto-ID</dt><dd>K-0003</dd></div>
+            <div class="einzelangabe"><dt>Passwortänderung</dt><dd>Über die Anmeldeseite</dd></div>
+          </dl>
+        </div>
+      </section>
+</main>
+  </body>
+</html>

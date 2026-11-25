@@ -1,0 +1,79 @@
+/* Login passend zu den vier Startseiten – nur HTML und CSS */
+:root {
+  --rot: #a72228;
+  --dunkelrot: #7f171d;
+  --hellrot: #f8eeee;
+  --schriftfarbe: #222124;
+  --grau: #6d6a6a;
+  --linie: #e7e1df;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #faf8f7; color: var(--schriftfarbe); font: 15px/1.55 Arial, sans-serif; }
+a { color: inherit; }
+button, input { font: inherit; }
+
+/* Kopf und Begrüßung */
+.seitenkopf { background: white; border-top: 5px solid var(--rot); border-bottom: 1px solid var(--linie); }
+.kopf-inhalt { max-width: 1130px; min-height: 87px; margin: auto; padding: 14px 26px; display: flex; align-items: center; gap: 18px; }
+.marke { display: flex; align-items: center; gap: 11px; text-decoration: none; margin-right: auto; }
+.markenzeichen { width: 40px; height: 40px; display: grid; place-items: center; background: var(--rot); color: white; font-size: 16px; font-weight: bold; }
+.markenname { display: flex; flex-direction: column; font-size: 19px; line-height: 1.1; font-weight: bold; }
+.markenname small { margin-top: 5px; font-size: 11px; font-weight: normal; color: var(--grau); }
+.rollenbezeichnung { font-size: 13px; color: var(--grau); }
+.anmeldeseite { max-width: 1130px; margin: auto; padding: 78px 26px 65px; display: grid; grid-template-columns: .95fr 1fr; gap: 70px; align-items: start; }
+.einleitung { padding-top: 47px; }
+.kleine-ueberschrift { margin: 0 0 14px; color: var(--rot); font-size: 11px; font-weight: bold; letter-spacing: 1.35px; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(30px, 3.3vw, 43px); line-height: 1.18; letter-spacing: -1px; }
+.einleitungstext-lang { margin: 18px 0 35px; max-width: 430px; color: var(--grau); }
+.einleitungshinweis { border-top: 1px solid var(--linie); padding-top: 21px; max-width: 430px; }
+.einleitungshinweis p { margin: 7px 0 0; font-size: 13px; color: var(--grau); }
+.anmeldekasten { background: white; border: 1px solid var(--linie); padding: 31px 33px 27px; }
+h2 { margin: 0 0 8px; font-size: 22px; }
+.kasten-einleitung { margin: 0 0 23px; color: var(--grau); font-size: 13px; }
+
+/* Benutzergruppe per CSS auswählen – kein JavaScript nötig */
+.rollenauswahl-eingabe { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.rollenauswahl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 26px; }
+.rollenauswahl label { display: grid; place-items: center; padding: 12px 8px; min-height: 49px; background: #fbf9f8; border: 1px solid var(--linie); font-size: 12px; font-weight: bold; text-align: center; cursor: pointer; }
+.rollenauswahl label:hover { color: var(--rot); }
+#rolle-person:checked ~ .rollenauswahl label[for="rolle-person"],
+#rolle-unternehmen:checked ~ .rollenauswahl label[for="rolle-unternehmen"],
+#rolle-staat:checked ~ .rollenauswahl label[for="rolle-staat"],
+#rolle-verwaltung:checked ~ .rollenauswahl label[for="rolle-admin"] { background: var(--hellrot); color: var(--dunkelrot); border-color: var(--rot); }
+.anmeldeformular { display: none; }
+#rolle-person:checked ~ .anmeldeformulare #anmeldung-person,
+#rolle-unternehmen:checked ~ .anmeldeformulare #anmeldung-unternehmen,
+#rolle-staat:checked ~ .anmeldeformulare #anmeldung-staat,
+#rolle-verwaltung:checked ~ .anmeldeformulare #anmeldung-verwaltung { display: block; }
+
+/* Anmeldeformular */
+h3 { margin: 0 0 17px; font-size: 15px; }
+.eingabefeld { display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px; }
+.eingabefeld label { font-size: 12px; font-weight: bold; }
+.eingabefeld input { width: 100%; min-height: 45px; padding: 11px 12px; border: 1px solid #d8d0ce; border-radius: 2px; }
+.eingabefeld input:focus { border-color: var(--rot); outline: 2px solid #fae9e9; }
+.schaltflaeche { width: 100%; margin-top: 5px; padding: 12px 16px; background: var(--rot); border: 1px solid var(--rot); border-radius: 2px; color: white; font-size: 13px; font-weight: bold; }
+.schaltflaeche:disabled { background: #a8a1a0; border-color: #a8a1a0; cursor: not-allowed; }
+.vorschaubereich { margin-top: 23px; padding-top: 16px; border-top: 1px solid var(--linie); }
+.vorschaubereich p, .klein { margin: 0 0 8px; color: var(--grau); font-size: 12px; }
+.vorschaulink, .passwortbereich summary { color: var(--rot); font-size: 13px; font-weight: bold; text-decoration: none; cursor: pointer; }
+.vorschaulink:hover { text-decoration: underline; }
+.passwortbereich { margin-top: 19px; }
+.passwortbereich form { border-top: 1px solid var(--linie); margin-top: 12px; padding-top: 16px; }
+.hinweis-unten { border-top: 1px solid var(--linie); margin: 25px 0 0; padding-top: 15px; color: var(--grau); font-size: 11px; }
+/* Kleinere Bildschirme */
+@media (max-width: 850px) {
+  .anmeldeseite { grid-template-columns: 1fr; gap: 31px; padding-top: 42px; }
+  .einleitung { padding-top: 0; }
+  .einleitungstext-lang { margin-bottom: 19px; }
+  .einleitungshinweis { display: none; }
+  .anmeldekasten { max-width: 570px; }
+}
+@media (max-width: 560px) {
+  .kopf-inhalt { padding: 14px 16px; }
+  .rollenbezeichnung { display: none; }
+  .markenzeichen { width: 34px; height: 34px; }
+  .anmeldeseite { padding: 32px 15px 45px; gap: 23px; }
+  h1 { font-size: 30px; }
+  .anmeldekasten { padding: 23px 17px; }
+}

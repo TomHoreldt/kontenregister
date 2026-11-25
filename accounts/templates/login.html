@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Anmeldung | Kontenregister
+    </title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <header class="seitenkopf">
+      <div class="kopf-inhalt">
+        <a href="login.html" class="marke" aria-label="Kontenregister – Anmeldung">
+          <span class="markenzeichen">KR</span>
+          <span class="markenname">Kontenregister<small>Staat neu denken</small></span>
+        </a>
+        <span class="rollenbezeichnung">Anmeldung</span>
+      </div>
+    </header>
+    <main class="anmeldeseite">
+      <div class="einleitung">
+        <p class="kleine-ueberschrift">Digitales Kontenregister</p>
+        <h1>Willkommen im Kontenregister.</h1>
+        <p class="einleitungstext-lang">Wählen Sie aus, in welchem Bereich Sie sich anmelden möchten.</p>
+        <div class="einleitungshinweis">
+          <strong>Ein Konto pro Benutzer</strong>
+          <p>Personen, Unternehmen und staatliche Institutionen greifen jeweils auf ihr eigenes Konto zu. Die Administration verwaltet das Gesamtsystem.</p>
+        </div>
+      </div>
+      <section class="anmeldekasten" aria-label="Anmeldung">
+        <h2>Bereich auswählen</h2>
+        <p class="kasten-einleitung">Wählen Sie Ihren Benutzertyp und geben Sie die Anmeldedaten ein.</p>
+        <input class="rollenauswahl-eingabe" type="radio" name="anmeldebereich" id="rolle-person" checked>
+        <input class="rollenauswahl-eingabe" type="radio" name="anmeldebereich" id="rolle-unternehmen">
+        <input class="rollenauswahl-eingabe" type="radio" name="anmeldebereich" id="rolle-staat">
+        <input class="rollenauswahl-eingabe" type="radio" name="anmeldebereich" id="rolle-verwaltung">
+        <div class="rollenauswahl" aria-label="Benutzertyp auswählen">
+          <label for="rolle-person">Person</label>
+          <label for="rolle-unternehmen">Unternehmen</label>
+          <label for="rolle-staat">Staatliche Institution</label>
+          <label for="rolle-verwaltung">Administration</label>
+        </div>
+        <div class="anmeldeformulare">
+          <section class="anmeldeformular" id="anmeldung-person" aria-labelledby="titel-person">
+            <h3 id="titel-person">Anmeldung als Person</h3>
+            <form method="post" action="#" autocomplete="on">
+              <div class="eingabefeld">
+                <label for="personen-kennung">Personen-ID</label>
+                <input id="personen-kennung" name="personenId" type="text" placeholder="z. B. P-0815" autocomplete="username" required>
+              </div>
+              <div class="eingabefeld">
+                <label for="personen-passwort">Passwort</label>
+                <input id="personen-passwort" name="passwort" type="password" placeholder="Passwort eingeben" autocomplete="current-password" required>
+              </div>
+              <button class="schaltflaeche" type="button" disabled>Anmelden</button>
+            </form>
+            <div class="vorschaubereich">
+              <p>Vorschau ohne Anmeldung:</p>
+              <a class="vorschaulink" href="person.html">Personenbereich öffnen</a>
+            </div>
+          </section>
+          <section class="anmeldeformular" id="anmeldung-unternehmen" aria-labelledby="titel-unternehmen">
+            <h3 id="titel-unternehmen">Anmeldung als Unternehmen</h3>
+            <form method="post" action="#" autocomplete="on">
+              <div class="eingabefeld">
+                <label for="unternehmens-kennung">Unternehmens-ID</label>
+                <input id="unternehmens-kennung" name="unternehmenId" type="text" placeholder="z. B. U-2030" autocomplete="username" required>
+              </div>
+              <div class="eingabefeld">
+                <label for="unternehmen-passwort">Passwort</label>
+                <input id="unternehmen-passwort" name="passwort" type="password" placeholder="Passwort eingeben" autocomplete="current-password" required>
+              </div>
+              <button class="schaltflaeche" type="button" disabled>Anmelden</button>
+            </form>
+            <div class="vorschaubereich">
+              <p>Vorschau ohne Anmeldung:</p>
+              <a class="vorschaulink" href="unternehmen.html">Unternehmensbereich öffnen</a>
+            </div>
+          </section>
+          <section class="anmeldeformular" id="anmeldung-staat" aria-labelledby="titel-staat">
+            <h3 id="titel-staat">Anmeldung als staatliche Institution</h3>
+            <form method="post" action="#" autocomplete="on">
+              <div class="eingabefeld">
+                <label for="institutions-kennung">Institutions-ID</label>
+                <input id="institutions-kennung" name="institutionsId" type="text" placeholder="z. B. S-1001" autocomplete="username" required>
+              </div>
+              <div class="eingabefeld">
+                <label for="staat-passwort">Passwort</label>
+                <input id="staat-passwort" name="passwort" type="password" placeholder="Passwort eingeben" autocomplete="current-password" required>
+              </div>
+              <button class="schaltflaeche" type="button" disabled>Anmelden</button>
+            </form>
+            <details class="passwortbereich">
+              <summary>Passwort ändern</summary>
+              <form method="post" action="#" autocomplete="off">
+                <div class="eingabefeld">
+                  <label for="staat-altes-passwort">Aktuelles Passwort</label>
+                  <input id="staat-altes-passwort" type="password" autocomplete="current-password">
+                </div>
+                <div class="eingabefeld">
+                  <label for="staat-neues-passwort">Neues Passwort</label>
+                  <input id="staat-neues-passwort" type="password" autocomplete="new-password">
+                </div>
+                <div class="eingabefeld">
+                  <label for="staat-neues-passwort-wiederholen">Neues Passwort wiederholen</label>
+                  <input id="staat-neues-passwort-wiederholen" type="password" autocomplete="new-password">
+                </div>
+                <button class="schaltflaeche" type="button" disabled>Passwort speichern</button>
+                <p class="klein">Diese Funktion wird später mit dem Backend verbunden.</p>
+              </form>
+            </details>
+            <div class="vorschaubereich">
+              <p>Vorschau ohne Anmeldung:</p>
+              <a class="vorschaulink" href="staat.html">Institutionsbereich öffnen</a>
+            </div>
+          </section>
+          <section class="anmeldeformular" id="anmeldung-verwaltung" aria-labelledby="titel-verwaltung">
+            <h3 id="titel-verwaltung">Anmeldung als Administrator</h3>
+            <form method="post" action="#" autocomplete="on">
+              <div class="eingabefeld">
+                <label for="verwaltungs-kennung">Admin-ID</label>
+                <input id="verwaltungs-kennung" name="adminId" type="text" placeholder="z. B. A-1001" autocomplete="username" required>
+              </div>
+              <div class="eingabefeld">
+                <label for="verwaltungs-passwort">Passwort</label>
+                <input id="verwaltungs-passwort" name="passwort" type="password" placeholder="Passwort eingeben" autocomplete="current-password" required>
+              </div>
+              <button class="schaltflaeche" type="button" disabled>Anmelden</button>
+            </form>
+            <details class="passwortbereich">
+              <summary>Passwort ändern</summary>
+              <form method="post" action="#" autocomplete="off">
+                <div class="eingabefeld">
+                  <label for="verwaltung-altes-passwort">Aktuelles Passwort</label>
+                  <input id="verwaltung-altes-passwort" type="password" autocomplete="current-password">
+                </div>
+                <div class="eingabefeld">
+                  <label for="verwaltung-neues-passwort">Neues Passwort</label>
+                  <input id="verwaltung-neues-passwort" type="password" autocomplete="new-password">
+                </div>
+                <div class="eingabefeld">
+                  <label for="verwaltung-neues-passwort-wiederholen">Neues Passwort wiederholen</label>
+                  <input id="verwaltung-neues-passwort-wiederholen" type="password" autocomplete="new-password">
+                </div>
+                <button class="schaltflaeche" type="button" disabled>Passwort speichern</button>
+                <p class="klein">Diese Funktion wird später mit dem Backend verbunden.</p>
+              </form>
+            </details>
+            <div class="vorschaubereich">
+              <p>Vorschau ohne Anmeldung:</p>
+              <a class="vorschaulink" href="admin.html">Adminbereich öffnen</a>
+            </div>
+          </section>
+        </div>
+        <p class="hinweis-unten">Frontend-Vorschau: Es werden keine Anmeldedaten verarbeitet oder gespeichert.</p>
+      </section>
+    </main>
+</body>
+</html>
