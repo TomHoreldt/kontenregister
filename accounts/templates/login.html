@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -6,7 +7,7 @@
     <title>
       Anmeldung | Kontenregister
     </title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
   </head>
   <body>
     <header class="seitenkopf">
@@ -23,10 +24,7 @@
         <p class="kleine-ueberschrift">Digitales Kontenregister</p>
         <h1>Willkommen im Kontenregister.</h1>
         <p class="einleitungstext-lang">Wählen Sie aus, in welchem Bereich Sie sich anmelden möchten.</p>
-        <div class="einleitungshinweis">
-          <strong>Ein Konto pro Benutzer</strong>
-          <p>Personen, Unternehmen und staatliche Institutionen greifen jeweils auf ihr eigenes Konto zu. Die Administration verwaltet das Gesamtsystem.</p>
-        </div>
+        
       </div>
       <section class="anmeldekasten" aria-label="Anmeldung">
         <h2>Bereich auswählen</h2>
